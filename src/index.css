@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: teal;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.appbar {
+  background-color: gray;
+  grid-column-start: 1;
+  grid-column-end: span 3;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+}
+html {
+  cursor: url(./Icons/mouse-pointer.png), auto;
+}
+.grid-container {
+  display: grid;
+  margin-top: 44px;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 25% 25% 25% 25%;
+}
+.icons {
+  grid-column-start: 4;
+  grid-row-end: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.computericon {
+  max-width: 52px;
+  max-height: 52px;
+  padding: 20px 10px 5px 10px;
+}
+.computericon img {
+  max-width: 52px;
+  max-height: 52px;
+  padding: 40px 30px 30px 40px;
+}
+.window-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.window {
+  width: 400px;
+  padding-bottom: 30px;
+}
+.window:nth-child(2) {
+  margin: 2rem;
+}
+.footer {
+  display: block;
+  height: 31px;
+  line-height: 31px;
+  padding-left: 0.25rem;
+  width: 100%;
+}
+.close-icon svg {
+  width: 20px;
+  height: 15px;
+}
+.window-content {
+  background-color: whitesmoke;
+}
+.my-computer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 5px;
+}
+.my-computer-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px 0;
+}
