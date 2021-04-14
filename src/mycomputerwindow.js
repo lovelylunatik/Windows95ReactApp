@@ -7,7 +7,7 @@ import {
   Button,
   Toolbar,
   Cutout,
-  Panel
+  Panel,
 } from "react95";
 import CloseIcon from "./closeicon";
 import drive from "./Icons/Drive.ico";
@@ -43,7 +43,7 @@ export const MyComputerWindow = () => (
     <WindowContent>
       <Cutout className="window-content">
         <div className="my-computer">
-          {content.map(file => (
+          {content.map((file) => (
             <MyComputer src={file.src} altText={file.alt} text={file.text} />
           ))}
         </div>
@@ -58,21 +58,21 @@ let content = [
   {
     src: drive,
     alt: "C Drive",
-    text: "(C:) "
+    text: "(C:) ",
   },
   {
     src: diskdrive,
     alt: "Disk Drive",
-    text: "(D:)"
+    text: "(D:)",
   },
   {
     src: controlsfolder,
     alt: "Control Panel Folder",
-    text: "Control Panel"
+    text: "Control Panel",
   },
   {
     src: printersfolder,
     alt: "Printer Folder",
-    text: "Printers"
-  }
+    text: "Printers",
+  },
 ];
