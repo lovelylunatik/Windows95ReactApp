@@ -14,9 +14,9 @@ import drive from "./Icons/Drive.ico";
 import diskdrive from "./Icons/Disc Drive.ico";
 import controlsfolder from "./Icons/Controls Folder.ico";
 import printersfolder from "./Icons/Printers folder.ico";
-import MyComputer from "./mycomputer";
+import MyComputer from "./mycomputericons";
 
-export const MyComputerWindow = ({ isOpen, onCloseWindow }) => {
+const MyComputerWindow = ({ isOpen, onCloseWindow }) => {
   return isOpen ? (
     <Window resizable className="window">
       <WindowHeader className="window-header">
@@ -78,3 +78,5 @@ let content = [
     text: "Printers",
   },
 ];
+
+export default MyComputerWindow;

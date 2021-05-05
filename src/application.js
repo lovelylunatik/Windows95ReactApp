@@ -1,8 +1,6 @@
 import React from "react";
 import "./index.css";
-import { WindowsStartBar } from "./header";
-import DesktopIcon from "./desktopicon";
-import { MyComputerWindow } from "./mycomputerwindow";
+import WindowsStartBar from "./windowsstartbar";
 import theme from "react95/dist/themes/candy";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { styleReset } from "react95";

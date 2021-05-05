@@ -1,14 +1,11 @@
 import React from "react";
-import icon from "./Icons/computer.png";
 import "./index.css";
 
-function DesktopIcon({ handleClick }) {
+function DesktopIcon({ src, alt, text, handleClick }) {
   return (
-    <div className="grid-container" onClick={handleClick}>
-      <div className="icons">
-        <img src={icon} alt="computer icon" className="computericon" />
-        <span>My Computer</span>
-      </div>
+    <div className="icons" onClick={handleClick}>
+      <img src={src} alt={alt} className="computericon" />
+      <span>{text}</span>
     </div>
   );
 }

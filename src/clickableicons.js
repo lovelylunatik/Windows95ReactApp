@@ -1,16 +1,24 @@
 import React, { useState } from "react";
 import "./index.css";
-import DesktopIcon from "./desktopicon";
-import { MyComputerWindow } from "./mycomputerwindow";
+import Desktop from "./desktop";
+import MyComputerWindow from "./mycomputerwindow";
 
 function ClickableIcons() {
-  const [isMyComputerOpen, setIsMyComputerOpen] = useState(false);
+  const [windowStates, setWindowStates] = useState({
+    myComputer: false,
+    paint: true,
+  });
+
+  const updateWindowState = (windowName, isOpen) => {
+    return setWindowStates({ ...windowStates, [windowName]: isOpen });
+  };
+
   return (
     <>
-      <DesktopIcon handleClick={() => setIsMyComputerOpen(true)} />,
+      <Desktop handleClick={updateWindowState} />,
       <MyComputerWindow
-        isOpen={isMyComputerOpen}
-        onCloseWindow={() => setIsMyComputerOpen(false)}
+        isOpen={windowStates.myComputer}
+        onCloseWindow={() => updateWindowState("myComputer", false)}
       />
     </>
   );

@@ -10,7 +10,7 @@ import {
 } from "react95";
 import image from "./Icons/logo.png";
 
-export const WindowsStartBar = () => {
+const WindowsStartBar = () => {
   const [open, setOpen] = React.useState(false);
   return (
     <AppBar>
@@ -64,3 +64,5 @@ export const WindowsStartBar = () => {
     </AppBar>
   );
 };
+
+export default WindowsStartBar;

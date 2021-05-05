@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import Application from "./application";
-import { WindowsStartBar } from "./header";
 
 ReactDOM.render(<Application />, document.getElementById("root"));
 
