@@ -6,11 +6,11 @@ import {
   Button,
   List,
   ListItem,
-  Divider
+  Divider,
 } from "react95";
 import image from "./Icons/logo.png";
 
-export const Default = () => {
+export const WindowsStartBar = () => {
   const [open, setOpen] = React.useState(false);
   return (
     <AppBar>
@@ -33,7 +33,7 @@ export const Default = () => {
               style={{
                 position: "absolute",
                 left: "0",
-                top: "100%"
+                top: "100%",
               }}
               onClick={() => setOpen(false)}
             >
