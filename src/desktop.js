@@ -2,6 +2,7 @@ import React from "react";
 import myComputerIcon from "./Icons/computer.png";
 import "./index.css";
 import DesktopIcon from "./desktopicon";
+import Notepad from "./Icons/Notepad.ico";
 
 function Desktop({ handleClick }) {
   return (
@@ -23,6 +24,12 @@ let content = [
     alt: "MyComputer Icon",
     text: "My Computer",
     windowName: "myComputer",
+  },
+  {
+    src: Notepad,
+    alt: "About Me",
+    text: "About Me",
+    windowName: "aboutMe",
   },
 ];
 export default Desktop;

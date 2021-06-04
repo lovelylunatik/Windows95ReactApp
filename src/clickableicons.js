@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./index.css";
 import Desktop from "./desktop";
 import MyComputerWindow from "./mycomputerwindow";
+import AboutMeWindow from "./aboutmewindow";
 
 function ClickableIcons() {
   const [windowStates, setWindowStates] = useState({
@@ -19,6 +20,10 @@ function ClickableIcons() {
       <MyComputerWindow
         isOpen={windowStates.myComputer}
         onCloseWindow={() => updateWindowState("myComputer", false)}
+      />
+      <AboutMeWindow
+        isOpen={windowStates.aboutMe}
+        onCloseWindow={() => updateWindowState("aboutMe", false)}
       />
     </>
   );

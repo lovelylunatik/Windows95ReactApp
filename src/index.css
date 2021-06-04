@@ -26,14 +26,17 @@ html {
   display: grid;
   margin-top: 44px;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-rows: auto;
+  row-gap: 10px;
+  justify-items: end;
 }
 .icons {
   grid-column-start: 4;
-  grid-row-end: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 130px;
+  overflow: visible;
 }
 .computericon {
   max-width: 52px;
@@ -52,7 +55,7 @@ html {
 }
 
 .window {
-  width: 400px;
+  width: 600px;
   padding-bottom: 30px;
 }
 .window:nth-child(2) {
@@ -82,4 +85,17 @@ html {
   align-items: center;
   flex-direction: column;
   margin: 10px 0;
+}
+.window-content-bio {
+  width: auto;
+  height: 400px;
+  background-color: whitesmoke;
+}
+.aboutme {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.title {
+  font-size: larger;
 }

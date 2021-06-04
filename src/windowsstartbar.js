@@ -8,7 +8,7 @@ import {
   ListItem,
   Divider,
 } from "react95";
-import image from "./Icons/logo.png";
+import windowsLogo from "./Icons/logo.png";
 
 const WindowsStartBar = () => {
   const [open, setOpen] = React.useState(false);
@@ -22,7 +22,7 @@ const WindowsStartBar = () => {
             style={{ fontWeight: "bold" }}
           >
             <img
-              src={image}
+              src={windowsLogo}
               alt="react95 logo"
               style={{ height: "20px", marginRight: 4 }}
             />
@@ -41,7 +41,7 @@ const WindowsStartBar = () => {
                 <span role="img" aria-label="👨‍💻">
                   👨‍💻
                 </span>
-                Profile
+                About Me
               </ListItem>
               <ListItem>
                 <span role="img" aria-label="📁">
