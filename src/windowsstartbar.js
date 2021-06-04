@@ -10,6 +10,7 @@ import {
 } from "react95";
 import windowsLogo from "./Icons/logo.png";
 import computercard from "./Icons/Computer Card.ico";
+import blueDisk from "./Icons/Diskette.ico";
 
 const WindowsStartBar = () => {
   const [open, setOpen] = React.useState(false);
@@ -39,7 +40,10 @@ const WindowsStartBar = () => {
               onClick={() => setOpen(false)}
             >
               <ListItem>
-                <a href="https://github.com/wolffalexandria">
+                <a
+                  href="https://github.com/wolffalexandria"
+                  alt="link to github"
+                >
                   <img
                     src={computercard}
                     alt="green computer card"
@@ -49,10 +53,22 @@ const WindowsStartBar = () => {
                 <a href="https://github.com/wolffalexandria">GitHub</a>
               </ListItem>
               <ListItem>
-                <span role="img" aria-label="📁">
-                  📁
-                </span>
-                My account
+                <a
+                  href="https://codesandbox.io/u/alexandriawolff"
+                  alt="CodeSandbox"
+                >
+                  <img
+                    src={blueDisk}
+                    alt="blue computer floppy disk"
+                    style={{ paddingRight: 5 }}
+                  />
+                </a>
+                <a
+                  href="https://codesandbox.io/u/alexandriawolff"
+                  alt="CodeSandbox"
+                >
+                  CodeSandbox
+                </a>
               </ListItem>
               <Divider />
               <ListItem disabled>
@@ -64,7 +80,7 @@ const WindowsStartBar = () => {
             </List>
           )}
         </div>
-        <TextField placeholder="Search..." width={150} />
+        {/* <TextField placeholder="Search..." width={150} /> */}
       </Toolbar>
     </AppBar>
   );
