@@ -9,6 +9,7 @@ import {
   Divider,
 } from "react95";
 import windowsLogo from "./Icons/logo.png";
+import computercard from "./Icons/Computer Card.ico";
 
 const WindowsStartBar = () => {
   const [open, setOpen] = React.useState(false);
@@ -38,10 +39,14 @@ const WindowsStartBar = () => {
               onClick={() => setOpen(false)}
             >
               <ListItem>
-                <span role="img" aria-label="👨‍💻">
-                  👨‍💻
-                </span>
-                About Me
+                <a href="https://github.com/wolffalexandria">
+                  <img
+                    src={computercard}
+                    alt="green computer card"
+                    style={{ paddingTop: 10 }}
+                  />
+                </a>
+                <a href="https://github.com/wolffalexandria">GitHub</a>
               </ListItem>
               <ListItem>
                 <span role="img" aria-label="📁">
