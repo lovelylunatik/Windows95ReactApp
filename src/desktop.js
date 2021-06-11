@@ -3,6 +3,7 @@ import myComputerIcon from "./Icons/computer.png";
 import "./index.css";
 import DesktopIcon from "./desktopicon";
 import Notepad from "./Icons/Notepad.ico";
+import SmileyFace from "./Icons/Smiley face.ico";
 
 function Desktop({ handleClick }) {
   return (
@@ -30,6 +31,12 @@ let content = [
     alt: "About Me",
     text: "About Me",
     windowName: "aboutMe",
+  },
+  {
+    src: SmileyFace,
+    alt: "Snake Game",
+    text: "Snake Game",
+    windowName: "snakeGame",
   },
 ];
 export default Desktop;

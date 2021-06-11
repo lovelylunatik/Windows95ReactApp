@@ -99,3 +99,7 @@ html {
 .title {
   font-size: larger;
 }
+.snake-game {
+  height: 175px;
+  width: auto;
+}

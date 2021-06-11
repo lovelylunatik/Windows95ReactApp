@@ -3,6 +3,7 @@ import "./index.css";
 import Desktop from "./desktop";
 import MyComputerWindow from "./mycomputerwindow";
 import AboutMeWindow from "./aboutmewindow";
+import SnakeGameWindow from "./snakegamewindow";
 
 function ClickableIcons() {
   const [windowStates, setWindowStates] = useState({
@@ -24,6 +25,10 @@ function ClickableIcons() {
       <AboutMeWindow
         isOpen={windowStates.aboutMe}
         onCloseWindow={() => updateWindowState("aboutMe", false)}
+      />
+      <SnakeGameWindow
+        isOpen={windowStates.snakeGame}
+        onCloseWindow={() => updateWindowState("snakeGame", false)}
       />
     </>
   );
