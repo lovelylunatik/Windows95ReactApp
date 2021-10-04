@@ -10,7 +10,6 @@ import {
 } from "react95";
 import CloseIcon from "./closeicon";
 import Draggable from "react-draggable";
-import Snake from "react-simple-snake";
 import SnakeToolbar from "./snaketoolbar";
 
 const SnakeGameWindow = ({ isOpen, onCloseWindow }) => {
@@ -28,9 +27,7 @@ const SnakeGameWindow = ({ isOpen, onCloseWindow }) => {
         <SnakeToolbar />
         <WindowContent>
           <Cutout className="window-content">
-            <div className="snake-game">
-              <Snake />
-            </div>
+            <div className="snake-game"></div>
           </Cutout>
         </WindowContent>
         <Panel variant="well" className="footer"></Panel>
