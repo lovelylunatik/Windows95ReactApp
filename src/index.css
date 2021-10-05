@@ -100,7 +100,6 @@ html {
   font-size: larger;
 }
 .snake-game {
-  height: 150.5px;
-  width: 210px;
-  border-width: 4.2px;
+  height: 400px;
+  width: 400px;
 }

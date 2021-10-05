@@ -11,6 +11,7 @@ import {
 import CloseIcon from "./closeicon";
 import Draggable from "react-draggable";
 import SnakeToolbar from "./snaketoolbar";
+import Snake from "./snake.js";
 
 const SnakeGameWindow = ({ isOpen, onCloseWindow }) => {
   return isOpen ? (
@@ -27,7 +28,9 @@ const SnakeGameWindow = ({ isOpen, onCloseWindow }) => {
         <SnakeToolbar />
         <WindowContent>
           <Cutout className="window-content">
-            <div className="snake-game"></div>
+            <div className="snake-game">
+              <Snake />
+            </div>
           </Cutout>
         </WindowContent>
         <Panel variant="well" className="footer"></Panel>
