@@ -15,7 +15,7 @@ import Snake from "./snake.js";
 
 const SnakeGameWindow = ({ isOpen, onCloseWindow }) => {
   return isOpen ? (
-    <Draggable>
+    <Draggable defaultPosition={{ x: 400, y: -300 }}>
       <Window resizable className="window">
         <WindowHeader className="window-header">
           <span>Snake Game</span>
@@ -28,7 +28,7 @@ const SnakeGameWindow = ({ isOpen, onCloseWindow }) => {
         <SnakeToolbar />
         <WindowContent>
           <Cutout className="window-content">
-            <div className="snake-game">
+            <div>
               <Snake />
             </div>
           </Cutout>

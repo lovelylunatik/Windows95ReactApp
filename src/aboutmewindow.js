@@ -7,7 +7,7 @@ import aboutMe from "./aboutmebio";
 
 const AboutMeWindow = ({ isOpen, onCloseWindow }) => {
   return isOpen ? (
-    <Draggable>
+    <Draggable defaultPosition={{ x: 400, y: -300 }}>
       <Window resizable className="window">
         <WindowHeader className="window-header">
           <span>About Me</span>

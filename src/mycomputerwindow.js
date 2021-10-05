@@ -19,7 +19,7 @@ import Draggable from "react-draggable";
 
 const MyComputerWindow = ({ isOpen, onCloseWindow }) => {
   return isOpen ? (
-    <Draggable>
+    <Draggable defaultPosition={{ x: 400, y: -300 }}>
       <Window resizable className="window">
         <WindowHeader className="window-header">
           <span>My Computer</span>

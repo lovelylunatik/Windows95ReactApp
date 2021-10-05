@@ -15,7 +15,7 @@ import blueDisk from "./Icons/Diskette.ico";
 const WindowsStartBar = () => {
   const [open, setOpen] = React.useState(false);
   return (
-    <AppBar>
+    <AppBar style={{ position: "static" }}>
       <Toolbar style={{ justifyContent: "space-between" }}>
         <div style={{ position: "relative", display: "inline-block" }}>
           <Button

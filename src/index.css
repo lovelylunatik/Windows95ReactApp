@@ -6,6 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: teal;
+  height: 100vh;
+  overflow: hidden;
 }
 
 code {
@@ -57,6 +59,7 @@ html {
 .window {
   width: 600px;
   padding-bottom: 30px;
+  position: absolute;
 }
 .window:nth-child(2) {
   margin: 2rem;
@@ -100,6 +103,8 @@ html {
   font-size: larger;
 }
 .snake-game {
+  box-sizing: border-box;
+  border: 1px solid black;
+  width: 100%;
   height: 400px;
-  width: 400px;
 }
