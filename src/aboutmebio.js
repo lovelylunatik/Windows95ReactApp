@@ -2,7 +2,7 @@ const aboutMe = (
   <p>
     <span className="title">Alexandria Wolff</span>
     <br></br>
-    --Current Role: Freelance Front End Developer at Jamstack.consulting--
+    --Current Role: Front End Developer at Jamstack.consulting--
     <br></br>
     <br></br>When the pandemic hit, like so many other people, I found myself
     unemployed and left with nothing but time. I used that time to learn skills
@@ -17,7 +17,11 @@ const aboutMe = (
     starting his own firm and needed a simple single page website. For this
     project I decided to use NextJS and Tailwind to create a website that
     surpassed their expectations. You can find the live site at{" "}
-    <a href="https://www.jordenlaw.com/" style={{ color: "teal" }}>
+    <a
+      href="https://www.jordenlaw.com/"
+      target="_blank"
+      style={{ color: "teal" }}
+    >
       JordenLaw.com
     </a>
     <br></br>
@@ -26,6 +30,7 @@ const aboutMe = (
     <a
       href="https://www.instagram.com/wolffalexandria/"
       style={{ color: "teal" }}
+      target="_blank"
     >
       Instagram.
     </a>{" "}

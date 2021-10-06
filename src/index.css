@@ -59,7 +59,7 @@ html {
 .window {
   width: 600px;
   padding-bottom: 30px;
-  position: absolute;
+  position: absolute !important;
 }
 .window:nth-child(2) {
   margin: 2rem;
