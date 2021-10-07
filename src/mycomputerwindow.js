@@ -17,10 +17,20 @@ import printersfolder from "./Icons/Printers folder.ico";
 import MyComputer from "./mycomputericons";
 import Draggable from "react-draggable";
 
-const MyComputerWindow = ({ isOpen, onCloseWindow }) => {
+const MyComputerWindow = ({
+  isOpen,
+  onCloseWindow,
+  isActive,
+  onFocusWindow,
+}) => {
   return isOpen ? (
     <Draggable defaultPosition={{ x: 400, y: -300 }}>
-      <Window resizable className="window">
+      <Window
+        style={{ zIndex: isActive ? 100 : 0 }}
+        onClick={onFocusWindow}
+        resizable
+        className="window"
+      >
         <WindowHeader className="window-header">
           <span>My Computer</span>
           <Button onClick={onCloseWindow}>

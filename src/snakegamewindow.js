@@ -13,10 +13,20 @@ import Draggable from "react-draggable";
 import SnakeToolbar from "./snaketoolbar";
 import Snake from "./snake.js";
 
-const SnakeGameWindow = ({ isOpen, onCloseWindow }) => {
+const SnakeGameWindow = ({
+  isOpen,
+  onCloseWindow,
+  isActive,
+  onFocusWindow,
+}) => {
   return isOpen ? (
     <Draggable defaultPosition={{ x: 400, y: -300 }}>
-      <Window resizable className="window">
+      <Window
+        style={{ zIndex: isActive ? 100 : 0 }}
+        onClick={onFocusWindow}
+        resizable
+        className="window"
+      >
         <WindowHeader className="window-header">
           <span>Snake Game</span>
           <Button onClick={onCloseWindow}>

@@ -11,6 +11,8 @@ function ClickableIcons() {
     paint: true,
   });
 
+  const [activeWindow, setActiveWindow] = useState("");
+
   const updateWindowState = (windowName, isOpen) => {
     return setWindowStates({ ...windowStates, [windowName]: isOpen });
   };
@@ -21,14 +23,20 @@ function ClickableIcons() {
       <MyComputerWindow
         isOpen={windowStates.myComputer}
         onCloseWindow={() => updateWindowState("myComputer", false)}
+        isActive={activeWindow === "myComputer"}
+        onFocusWindow={() => setActiveWindow("myComputer")}
       />
       <AboutMeWindow
         isOpen={windowStates.aboutMe}
         onCloseWindow={() => updateWindowState("aboutMe", false)}
+        isActive={activeWindow === "aboutMe"}
+        onFocusWindow={() => setActiveWindow("aboutMe")}
       />
       <SnakeGameWindow
         isOpen={windowStates.snakeGame}
         onCloseWindow={() => updateWindowState("snakeGame", false)}
+        isActive={activeWindow === "snakeGame"}
+        onFocusWindow={() => setActiveWindow("snakeGame")}
       />
     </>
   );
