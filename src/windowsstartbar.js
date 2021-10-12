@@ -43,6 +43,7 @@ const WindowsStartBar = () => {
                 <a
                   href="https://github.com/wolffalexandria"
                   alt="link to github"
+                  target="_blank"
                 >
                   <img
                     src={computercard}
@@ -56,6 +57,7 @@ const WindowsStartBar = () => {
                 <a
                   href="https://codesandbox.io/u/alexandriawolff"
                   alt="CodeSandbox"
+                  target="_blank"
                 >
                   <img
                     src={blueDisk}

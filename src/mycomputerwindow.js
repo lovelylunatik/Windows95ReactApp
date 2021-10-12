@@ -10,10 +10,7 @@ import {
   Panel,
 } from "react95";
 import CloseIcon from "./closeicon";
-import drive from "./Icons/Drive.ico";
-import diskdrive from "./Icons/Disc Drive.ico";
-import controlsfolder from "./Icons/Controls Folder.ico";
-import printersfolder from "./Icons/Printers folder.ico";
+import folder from "./Icons/Folder.ico";
 import MyComputer from "./mycomputericons";
 import Draggable from "react-draggable";
 
@@ -61,6 +58,8 @@ const MyComputerWindow = ({
                   src={file.src}
                   altText={file.alt}
                   text={file.text}
+                  href={file.href}
+                  target={file.target}
                 />
               ))}
             </div>
@@ -75,24 +74,32 @@ const MyComputerWindow = ({
 };
 let content = [
   {
-    src: drive,
-    alt: "C Drive",
-    text: "(C:) ",
+    src: folder,
+    alt: "The original concept for the Jorden Law Firm website",
+    text: "JordenLaw",
+    href: "https://613bdb120003980007d11585--affectionate-torvalds-950325.netlify.app/",
+    target: "_blank",
   },
   {
-    src: diskdrive,
-    alt: "Disk Drive",
-    text: "(D:)",
+    src: folder,
+    alt: "The original concept for the Jorden Law Firm website",
+    text: "JordenLaw-Concept",
+    href: "https://613bdb120003980007d11585--affectionate-torvalds-950325.netlify.app/",
+    target: "_blank",
   },
   {
-    src: controlsfolder,
-    alt: "Control Panel Folder",
-    text: "Control Panel",
+    src: folder,
+    alt: "Leo's' Website aka my dog's site",
+    text: "Leo's Site",
+    href: "https://leothemaltipoo.netlify.app/",
+    target: "_blank",
   },
   {
-    src: printersfolder,
-    alt: "Printer Folder",
-    text: "Printers",
+    src: folder,
+    alt: "The first website I made",
+    text: "FirstWebsite",
+    href: "https://alex-wolff-firstwebsite.netlify.app/",
+    target: "_blank",
   },
 ];
 
