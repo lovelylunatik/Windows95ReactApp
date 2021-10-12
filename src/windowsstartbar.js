@@ -51,7 +51,13 @@ const WindowsStartBar = () => {
                     style={{ paddingTop: 10 }}
                   />
                 </a>
-                <a href="https://github.com/wolffalexandria">GitHub</a>
+                <a
+                  href="https://github.com/wolffalexandria"
+                  alt="link to github"
+                  target="_blank"
+                >
+                  GitHub
+                </a>
               </ListItem>
               <ListItem>
                 <a
@@ -68,6 +74,7 @@ const WindowsStartBar = () => {
                 <a
                   href="https://codesandbox.io/u/alexandriawolff"
                   alt="CodeSandbox"
+                  target="_blank"
                 >
                   CodeSandbox
                 </a>
