@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import "./index.css";
-import Desktop from "./desktop";
-import MyComputerWindow from "./mycomputerwindow";
-import AboutMeWindow from "./aboutmewindow";
-import SnakeGameWindow from "./snakegamewindow";
+import "../index.css";
+import DesktopIcons from "./DesktopIcons";
+import MyComputerWindow from "./Windows/mycomputerwindow";
+import AboutMeWindow from "./Windows/AboutMe/index.js";
+import SnakeGameWindow from "./Windows/SnakeGame/snakegamewindow";
 
-function ClickableIcons() {
+function DesktopManager() {
   const [windowStates, setWindowStates] = useState({
     myComputer: false,
     paint: true,
@@ -19,7 +19,7 @@ function ClickableIcons() {
 
   return (
     <>
-      <Desktop handleClick={updateWindowState} />,
+      <DesktopIcons handleClick={updateWindowState} />,
       <MyComputerWindow
         isOpen={windowStates.myComputer}
         onCloseWindow={() => updateWindowState("myComputer", false)}
@@ -42,4 +42,4 @@ function ClickableIcons() {
   );
 }
 
-export default ClickableIcons;
+export default DesktopManager;

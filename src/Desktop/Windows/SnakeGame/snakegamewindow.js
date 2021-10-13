@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.css";
+import "../../../index.css";
 import {
   Window,
   WindowContent,
@@ -8,7 +8,7 @@ import {
   Cutout,
   Panel,
 } from "react95";
-import CloseIcon from "./closeicon";
+import CloseIcon from "../shared/closeicon";
 import Draggable from "react-draggable";
 import SnakeToolbar from "./snaketoolbar";
 import Snake from "./snake.js";

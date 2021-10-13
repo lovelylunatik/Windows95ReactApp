@@ -8,9 +8,10 @@ import {
   ListItem,
   Divider,
 } from "react95";
-import windowsLogo from "./Icons/logo.png";
-import computercard from "./Icons/Computer Card.ico";
-import blueDisk from "./Icons/Diskette.ico";
+import windowsLogo from "../Icons/logo.png";
+import computercard from "../Icons/ComputerCard.ico";
+import blueDisk from "../Icons/Diskette.ico";
+import bookdisk from "../Icons/BookDisc.ico";
 
 const WindowsStartBar = () => {
   const [open, setOpen] = React.useState(false);
@@ -50,13 +51,7 @@ const WindowsStartBar = () => {
                     alt="green computer card"
                     style={{ paddingTop: 10 }}
                   />
-                </a>
-                <a
-                  href="https://github.com/wolffalexandria"
-                  alt="link to github"
-                  target="_blank"
-                >
-                  GitHub
+                  <span>GitHub</span>
                 </a>
               </ListItem>
               <ListItem>
@@ -70,13 +65,21 @@ const WindowsStartBar = () => {
                     alt="blue computer floppy disk"
                     style={{ paddingRight: 5 }}
                   />
+                  <span>CodeSandbox</span>
                 </a>
+              </ListItem>
+              <ListItem>
                 <a
-                  href="https://codesandbox.io/u/alexandriawolff"
-                  alt="CodeSandbox"
+                  href="https://www.canva.com/design/DAEFDzK-WrA/N92nyulYJOy9Ao2c3Gj4kg/view?utm_content=DAEFDzK-WrA&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+                  alt="Alex Wolff's Resume"
                   target="_blank"
                 >
-                  CodeSandbox
+                  <img
+                    src={bookdisk}
+                    alt="open book with cd disc behind it"
+                    style={{ paddingRight: 5 }}
+                  />
+                  <span>Resume</span>
                 </a>
               </ListItem>
               <Divider />

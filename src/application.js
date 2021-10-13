@@ -1,10 +1,10 @@
 import React from "react";
 import "./index.css";
-import WindowsStartBar from "./windowsstartbar";
+import WindowsStartBar from "./Desktop/windowsstartbar";
 import theme from "react95/dist/themes/candy";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { styleReset } from "react95";
-import ClickableIcons from "./clickableicons";
+import DesktopManager from "./Desktop/DesktopManager";
 import ms_sans_serif from "react95/dist/fonts/ms_sans_serif.woff2";
 import ms_sans_serif_bold from "react95/dist/fonts/ms_sans_serif_bold.woff2";
 
@@ -33,7 +33,9 @@ function Application() {
       <GlobalStyles />
       <ThemeProvider theme={theme}>
         <WindowsStartBar />
-        <ClickableIcons />
+        <div className="desktop">
+          <DesktopManager />
+        </div>
       </ThemeProvider>
     </div>
   );

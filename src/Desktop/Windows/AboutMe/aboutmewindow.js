@@ -1,7 +1,7 @@
 import React from "react";
-import "./index.css";
+import "../../../index.css";
 import { Window, WindowHeader, Button, Toolbar, Cutout, Panel } from "react95";
-import CloseIcon from "./closeicon";
+import CloseIcon from "../shared/closeicon";
 import Draggable from "react-draggable";
 import aboutMe from "./aboutmebio";
 

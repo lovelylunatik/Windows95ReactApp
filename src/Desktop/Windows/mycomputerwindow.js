@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.css";
+import "../../index.css";
 import {
   Window,
   WindowContent,
@@ -9,9 +9,9 @@ import {
   Cutout,
   Panel,
 } from "react95";
-import CloseIcon from "./closeicon";
-import folder from "./Icons/Folder.ico";
-import MyComputer from "./mycomputericons";
+import CloseIcon from "./shared/closeicon";
+import folder from "../../Icons/Folder.ico";
+import FolderIcon from "./shared/foldericon";
 import Draggable from "react-draggable";
 
 const MyComputerWindow = ({
@@ -54,12 +54,11 @@ const MyComputerWindow = ({
           <Cutout className="window-content">
             <div className="my-computer">
               {content.map((file) => (
-                <MyComputer
+                <FolderIcon
                   src={file.src}
                   altText={file.alt}
                   text={file.text}
                   href={file.href}
-                  target={file.target}
                 />
               ))}
             </div>
@@ -76,30 +75,20 @@ let content = [
   {
     src: folder,
     alt: "The original concept for the Jorden Law Firm website",
-    text: "JordenLaw",
-    href: "https://613bdb120003980007d11585--affectionate-torvalds-950325.netlify.app/",
-    target: "_blank",
-  },
-  {
-    src: folder,
-    alt: "The original concept for the Jorden Law Firm website",
     text: "JordenLaw-Concept",
     href: "https://613bdb120003980007d11585--affectionate-torvalds-950325.netlify.app/",
-    target: "_blank",
   },
   {
     src: folder,
     alt: "Leo's' Website aka my dog's site",
     text: "Leo's Site",
     href: "https://leothemaltipoo.netlify.app/",
-    target: "_blank",
   },
   {
     src: folder,
     alt: "The first website I made",
     text: "FirstWebsite",
     href: "https://alex-wolff-firstwebsite.netlify.app/",
-    target: "_blank",
   },
 ];
 

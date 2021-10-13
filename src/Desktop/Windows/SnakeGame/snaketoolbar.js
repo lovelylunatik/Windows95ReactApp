@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.css";
+import "../../../index.css";
 import { Toolbar, Button, List, ListItem } from "react95";
 
 const SnakeToolbar = () => {

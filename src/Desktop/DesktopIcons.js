@@ -1,11 +1,11 @@
 import React from "react";
-import myComputerIcon from "./Icons/computer.png";
-import "./index.css";
+import myComputerIcon from "../Icons/computer.png";
+import "../index.css";
 import DesktopIcon from "./desktopicon";
-import Notepad from "./Icons/Notepad.ico";
-import SmileyFace from "./Icons/Smiley face.ico";
+import Notepad from "../Icons/Notepad.ico";
+import SmileyFace from "../Icons/Smileyface.ico";
 
-function Desktop({ handleClick }) {
+function DesktopIcons({ handleClick }) {
   return (
     <div className="grid-container">
       {content.map((icon) => (
@@ -39,4 +39,4 @@ let content = [
     windowName: "snakeGame",
   },
 ];
-export default Desktop;
+export default DesktopIcons;
