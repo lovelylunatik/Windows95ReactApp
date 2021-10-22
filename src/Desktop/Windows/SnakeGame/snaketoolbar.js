@@ -2,7 +2,7 @@ import React from "react";
 import "../../../index.css";
 import { Toolbar, Button, List, ListItem } from "react95";
 
-const SnakeToolbar = () => {
+const SnakeToolbar = ({ onClickStart }) => {
   const [open, setOpen] = React.useState(false);
 
   return (
@@ -26,19 +26,19 @@ const SnakeToolbar = () => {
           onClick={() => setOpen(false)}
         >
           <ListItem>
-            <span>Reset Game</span>
+            <span onClick={onClickStart}>Start Game</span>
           </ListItem>
         </List>
       )}
-      <Button
+      {/* <Button
         onClick={() => setOpen(!open)}
         active={open}
         variant="menu"
         size="sm"
       >
         Options
-      </Button>
-      {open && (
+      </Button> */}
+      {/* {open && (
         <List
           style={{
             position: "absolute",
@@ -52,7 +52,7 @@ const SnakeToolbar = () => {
             <span>Snake Color</span>
           </ListItem>
         </List>
-      )}
+      )} */}
     </Toolbar>
   );
 };

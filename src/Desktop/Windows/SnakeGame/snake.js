@@ -9,14 +9,19 @@ import {
   DIRECTIONS,
 } from "./snakeconstants";
 
-const Snake = () => {
-  const canvasRef = useRef();
-  const [snake, setSnake] = useState(SNAKE_START);
-  const [apple, setApple] = useState(APPLE_START);
-  const [dir, setDir] = useState([0, -1]);
-  const [speed, setSpeed] = useState(null);
-  const [gameOver, setGameOver] = useState(false);
-
+const Snake = ({
+  snake,
+  setSnake,
+  apple,
+  setApple,
+  dir,
+  setDir,
+  speed,
+  setSpeed,
+  gameOver,
+  setGameOver,
+  canvasRef,
+}) => {
   useInterval(() => gameLoop(), speed);
 
   const endGame = () => {
@@ -24,8 +29,9 @@ const Snake = () => {
     setGameOver(true);
   };
 
-  const moveSnake = ({ keyCode }) =>
+  const moveSnake = ({ keyCode }) => {
     keyCode >= 37 && keyCode <= 40 && setDir(DIRECTIONS[keyCode]);
+  };
 
   const createApple = () =>
     apple.map((_a, i) => Math.floor(Math.random() * (CANVAS_SIZE[i] / SCALE)));
@@ -66,15 +72,8 @@ const Snake = () => {
     setSnake(snakeCopy);
   };
 
-  const startGame = () => {
-    setSnake(SNAKE_START);
-    setApple(APPLE_START);
-    setDir([0, -1]);
-    setSpeed(SPEED);
-    setGameOver(false);
-  };
-
   useEffect(() => {
+    if (!canvasRef) return null;
     const context = canvasRef.current.getContext("2d");
     context.setTransform(SCALE, 0, 0, SCALE, 0, 0);
     context.clearRect(0, 0, window.innerWidth, window.innerHeight);
@@ -82,7 +81,7 @@ const Snake = () => {
     snake.forEach(([x, y]) => context.fillRect(x, y, 1, 1));
     context.fillStyle = "lightblue";
     context.fillRect(apple[0], apple[1], 1, 1);
-  }, [snake, apple, gameOver]);
+  }, [snake, apple, gameOver, canvasRef]);
 
   return (
     <div role="button" tabIndex="0" onKeyDown={(e) => moveSnake(e)}>
@@ -91,9 +90,10 @@ const Snake = () => {
         ref={canvasRef}
         width={`${CANVAS_SIZE[0]}px`}
         height={`${CANVAS_SIZE[1]}px`}
+        tabIndex="0"
       />
       {gameOver && <div>GAME OVER!</div>}
-      <button onClick={startGame}>Start Game</button>
+      {/* <button onClick={startGame}>Start Game</button> */}
     </div>
   );
 };
